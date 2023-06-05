@@ -41,6 +41,8 @@ const Hedonic = () => {
         ratingColor = 'primary-600'
     }
 
+    
+
   return (
     <div className="flex flex-col items-center">
       <h1 className="text-3xl font-bold mb-4 text-primary">Rate the Beer</h1>
@@ -70,6 +72,16 @@ const Hedonic = () => {
       <p className="text-accent mt-2">
         Drag the slider to rate the beer (1-9).
       </p>
+    <div className="flex flex-col items-center w-full px-2 text-neutral">
+      <p className="text-primary my-2">
+        What did you like or dislike about the beer?
+      </p>
+      <textarea 
+        placeholder="Give your feedback here" 
+        className="textarea textarea-bordered textarea-lg w-full max-w-xs" >
+      </textarea>
+      <button className="btn btn-primary mt-2">Submit</button>
+    </div>
     </div>
   );
 };

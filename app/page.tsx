@@ -11,7 +11,7 @@ export default function Home() {
           <h1 className="text-4xl font-bold text-neutral">Welcome to The Tasty Tasters</h1>
           <p className="mt-4 text-xl text-accent">Collect feedback on your favorite brewery's beer.</p>
           <div className="mt-8">
-            <Link href="#" className="btn btn-primary">
+            <Link href="/Tastings" className="btn btn-primary">
               Get Started
             </Link>
           </div>

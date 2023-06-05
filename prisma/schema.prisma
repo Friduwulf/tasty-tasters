@@ -53,8 +53,8 @@ model VerificationToken {
 model Tasting {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   name String
-  date DateTime
-  due DateTime
+  dateCreated DateTime
+  dueDate DateTime
   tests Tests[]
 }
 
