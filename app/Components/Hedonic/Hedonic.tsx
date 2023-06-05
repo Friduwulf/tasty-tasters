@@ -43,10 +43,10 @@ const Hedonic = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <h1 className="text-3xl font-bold mb-4">Rate the Beer</h1>
+      <h1 className="text-3xl font-bold mb-4 text-primary">Rate the Beer</h1>
       <p className={`font-bold ${ratingColor}`}>{ratingText}</p>
       <div className="flex flex-col items-center w-full">
-        <div className="flex justify-between text-xs w-full px-2">
+        <div className="flex justify-between text-xs w-full px-2 text-accent">
           <span>1</span>
           <span>2</span>
           <span>3</span>
@@ -67,7 +67,7 @@ const Hedonic = () => {
           onChange={handleRatingChange}
         />
       </div>
-      <p className="text-gray-500 mt-2">
+      <p className="text-accent mt-2">
         Drag the slider to rate the beer (1-9).
       </p>
     </div>

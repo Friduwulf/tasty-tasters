@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <AuthProvider>
-      <html data-theme="winter" lang="en">
+      <html data-theme="emerald" lang="en">
         <body className={montserrat.className}>
           {children}
           <script 
