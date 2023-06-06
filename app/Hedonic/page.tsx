@@ -6,8 +6,7 @@ const RateBeer = () => {
   return (
     <div>
       <Navbar />
-      
-      <main className="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8 bg-base-100">
+      <main className="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
         <Hedonic />
       </main>
     </div>

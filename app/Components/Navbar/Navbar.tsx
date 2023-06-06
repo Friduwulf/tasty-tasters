@@ -12,11 +12,12 @@ const Navbar = () => {
               <Link
                 className='text-2xl font-bold text-neutral'
                 href="/">
-                  Tasty Tasters
+                  Tasty
+                  <span className="text-accent">TASTERS</span>
               </Link>
             </div>
           </div>
-          <div className="hidden md:block">
+          <div>
             <div className="ml-4 flex items-center space-x-4 md:ml-6">
             <button type="button" className="btn btn-primary">Contact</button>
             <SignOutButton />

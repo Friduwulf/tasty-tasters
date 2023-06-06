@@ -12,14 +12,14 @@ interface Props {
     const formattedDueDate = dueDate.toLocaleDateString();
   
     return (
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card max-w-lg bg-neutral shadow-xl">
         <div className="card-body">
           <h2 className="card-title text-primary">{name}</h2>
-          <p className="text-primary">Date Created: {formattedDateCreated}</p>
-          <p className="text-primary">Date Due: {formattedDueDate}</p>
+          <p className="text-base-100">Date Created: {formattedDateCreated}</p>
+          <p className="text-base-100">Date Due: {formattedDueDate}</p>
           <p></p>
           <div className="card-actions justify-end">
-            <a role='button' href='http://localhost:3000/Hedonic' className="btn btn-primary">Get Tasting!</a>
+            <a role='button' href='http://localhost:3000/Tests' className="btn btn-primary">Get Tasting!</a>
           </div>
         </div>
       </div>

@@ -21,10 +21,5 @@ module.exports = {
     themes: [
       'emerald',
     ], 
-    // darkTheme: 'dark',
-    base: true,
-    styled: true,
-    utils: true,
   },
-  darkMode: 'class',
 }
