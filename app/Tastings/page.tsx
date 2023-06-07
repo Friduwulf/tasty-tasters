@@ -5,7 +5,7 @@ import TastingCard  from '../Components/TastingCard/Card';
 export default async function Tests() {
 
     const tastings = await prisma.tasting.findMany();
-
+    console.log(tastings)
   return (
     <div>
       <Navbar />
