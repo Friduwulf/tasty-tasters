@@ -76,7 +76,7 @@ const Hedonic = () => {
         Drag the slider to rate the beer (1-9).
       </p>
     <div className="flex flex-col items-center w-full px-2 text-neutral">
-      <p className="text-primary my-2">
+      <p className="my-4">
         What did you like or dislike about the beer?
       </p>
       <textarea 
