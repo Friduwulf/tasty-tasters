@@ -81,10 +81,3 @@ model Beer {
   style String
   test Tests[]
 }
-
-model Tags {
-  id String @id @default(auto()) @map("_id") @db.ObjectId
-  name String
-  // tests Tests @relation(fields: [testId], references: [id], onDelete: Cascade)
-  testId String[] @db.ObjectId
-}

@@ -2,6 +2,10 @@
 
 import { useState, ChangeEvent } from 'react';
 
+interface Props {
+
+}
+
 const Hedonic = () => {
   const [rating, setRating] = useState<number>(5); // Initial rating value
 
@@ -44,8 +48,7 @@ const Hedonic = () => {
     
 
   return (
-    <div className="flex flex-col items-center">
-      <h1 className="text-3xl font-bold mb-4 text-primary">Rate the Beer</h1>
+    <div className="flex flex-col items-center basis-1/2">
       <p className={`font-bold ${ratingColor}`}>{ratingText}</p>
       <div className="flex flex-col items-center w-full">
         <div className="flex justify-between text-xs w-full px-2 text-accent">

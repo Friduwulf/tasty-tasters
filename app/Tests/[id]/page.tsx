@@ -6,20 +6,11 @@ interface Props {
   params: { id: string };
 }
 
-interface TestProps {
-  id: string;
-  testType: string;
-  batch: string;
-  tastingId: string;
-  beerName: string;
-  beerStyle: string;
-}
-
 export default async function Tests({ params }: Props) {
-  // console.log(`tastingID: ${params.id}`);
+  console.log(`tastingID: ${params.id}`);
   const tests = await prisma.tests.findMany({ 
     where: 
-    { name: "Sample A" }, 
+    { tastingId: params.id }, 
     include: { beer : true } 
   });
   console.log(`Tests: ${tests}`)

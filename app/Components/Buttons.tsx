@@ -2,7 +2,6 @@
 
 import { useSession, signIn, signOut } from 'next-auth/react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 export function SignInButton() {
     const { data: session, status } = useSession();
@@ -13,10 +12,10 @@ export function SignInButton() {
     }
 
     if (status === 'authenticated'){
-        return (
-            <Link href={`/dashboard`}>
-                <div className="avatar">
-                    <div className="w-12 rounded-full">
+        return (            
+            <div className="dropdown dropdown-end">
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                    <div className="w-10 rounded-full">
                         <Image
                             src={session.user?.image ?? "/depositphotos_133351928-stock-illustration-default-placeholder-man-and-woman.jpg"}
                             width={32}
@@ -24,21 +23,20 @@ export function SignInButton() {
                             alt="User Image"
                         />
                     </div>
-                </div>
-            </Link>
+                </label>
+                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                <li>
+                    <a className="justify-between">
+                    Profile
+                    </a>
+                </li>
+                <li><a>Contact</a></li>
+                <li><a>Settings</a></li>
+                <li><a onClick={() => signOut()}>Sign Out</a></li>
+                </ul>
+            </div>
         );
     }
 
     return <button className='btn btn-primary' onClick={() => signIn()}>Sign In</button>;
-}
-
-export function SignOutButton() {
-    const { data: session } = useSession();
-    return (
-        <div>
-            {session && (
-                <button className='btn btn-primary' onClick={() => signOut()}>Sign Out</button>
-            )}
-        </div>
-    );
 }

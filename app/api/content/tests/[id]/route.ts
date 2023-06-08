@@ -1,19 +1,20 @@
 import { prisma } from '@/lib/prisma'
-import { NextRequest, NextResponse } from 'next/server'
+import { NextResponse } from 'next/server'
 
-interface Params {
-    params: { id: string }
+interface Props {
+  params: { id: string };
 }
+  
+export async function GET(request: Request, { params }: Props) {
+  const tastingId  = params.id;
+  console.log(`id: ${params.id}`)
 
-
-export default async function GET( params: Params) {
-
-
-    const tests = await prisma.tests.findMany(
-        {
-            where: {
-                tastingId: params.params.id
-        }
-    })
-    return NextResponse.json(tests);
+  const theTests = await prisma.tests.findMany({ 
+    include: 
+    { beer : true, tasting: true }, 
+    where: 
+    { tastingId: tastingId },
+  }); 
+  console.log(theTests);
+  return NextResponse.json(theTests);
 }

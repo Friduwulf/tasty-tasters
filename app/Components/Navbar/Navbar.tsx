@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { SignInButton, SignOutButton } from '../Buttons';
+import { SignInButton } from '../Buttons';
 
 
 const Navbar = () => {
@@ -19,8 +19,6 @@ const Navbar = () => {
           </div>
           <div>
             <div className="ml-4 flex items-center space-x-4 md:ml-6">
-            <button type="button" className="btn btn-primary">Contact</button>
-            <SignOutButton />
             <SignInButton />
             </div>
           </div>
