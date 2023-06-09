@@ -25,10 +25,9 @@ export default function TastingCard({ id, name, dateCreated, dueDate }: TastingC
   return (
     <div className="card max-w-lg bg-neutral shadow-xl">
       <div className="card-body">
-        <h2 className="card-title text-primary">{name}</h2>
-        <p className="text-base-100">Date Created: {formattedDateCreated}</p>
-        <p className="text-base-100">Date Due: {formattedDueDate}</p>
-        <p></p>
+        <h2 className="card-title text-secondary">{name}</h2>
+        <p>Date Created: {formattedDateCreated}</p>
+        <p >Date Due: {formattedDueDate}</p>
         <div className="card-actions justify-end">
           <button onClick={handleClick} className="btn btn-primary">Get Tasting!</button>
         </div>

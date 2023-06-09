@@ -16,6 +16,10 @@
   }
 }
 
+p, h1, h2, h3, li, ul, textarea, text {
+  color: #9ca3af
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(

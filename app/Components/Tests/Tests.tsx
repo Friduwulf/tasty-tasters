@@ -13,6 +13,7 @@ interface TestProps {
     },
 }
 
+//A card to display a test
 export default function Test({ id, name, testType, batch, tastingId, beerId, beer }: TestProps) {
     console.log(
         id, 
@@ -25,12 +26,12 @@ export default function Test({ id, name, testType, batch, tastingId, beerId, bee
         );
 
     return (
-        <Link className="card max-w-lg bg-neutral shadow-xl" href={`/${testType}/${beerId}`}>
-            <div className="card-body">
+        <Link className="card w-full bg-neutral shadow-xl" href={`/${testType}/${beerId}`}>
+            <div className="card-body w-full">
                 <h2 className="card-title text-primary">{name}</h2>
-                <p className="text-base-100">Beer: {beer.name}</p>
-                <p className="text-base-100">{testType} Test</p>
-                <p className="text-base-100">Batch: {batch}</p>
+                <p>{testType} Test</p>
+                <p>Beer: {beer.name}</p>
+                <p>Batch: {batch}</p>
             </div>
         </Link>
     );
